@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCodeCreateVC">
+            <connections>
+                <outlet property="ImageView" destination="WDt-vh-bCy" id="jS0-ac-14d"/>
+                <outlet property="textField" destination="8We-Yy-ywO" id="Qd3-0v-xqZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入二维码信息" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8We-Yy-ywO">
+                    <rect key="frame" x="75" y="100" width="225" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" tag="9902" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVI-59-gdF">
+                    <rect key="frame" x="148" y="180" width="80" height="30"/>
+                    <color key="backgroundColor" red="0.86783808409999996" green="0.45791683659999999" blue="0.17211640689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="rB0-ew-Mi3"/>
+                        <constraint firstAttribute="width" constant="80" id="yxz-FH-0b7"/>
+                    </constraints>
+                    <state key="normal" title="头像二维码">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="createQRCodeAction:" destination="-1" eventType="touchUpInside" id="2o9-Y6-Cs3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="9903" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzZ-uG-gwP">
+                    <rect key="frame" x="248" y="180" width="80" height="30"/>
+                    <color key="backgroundColor" red="0.86783808409999996" green="0.45791683659999999" blue="0.17211640689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="YfV-aA-Zf6"/>
+                        <constraint firstAttribute="height" constant="30" id="v39-75-dCC"/>
+                    </constraints>
+                    <state key="normal" title="彩色二维码">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="createQRCodeAction:" destination="-1" eventType="touchUpInside" id="YfG-46-meN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="9901" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbP-lK-q2y">
+                    <rect key="frame" x="48" y="180" width="80" height="30"/>
+                    <color key="backgroundColor" red="0.86783808409999996" green="0.45791683659999999" blue="0.17211640689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="jSc-Dy-Tk4"/>
+                        <constraint firstAttribute="width" constant="80" id="q4P-lF-4zs"/>
+                    </constraints>
+                    <state key="normal" title="普通二维码">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="createQRCodeAction:" destination="-1" eventType="touchUpInside" id="yZi-p9-I1F"/>
+                    </connections>
+                </button>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDt-vh-bCy">
+                    <rect key="frame" x="88" y="310" width="200" height="200"/>
+                    <color key="backgroundColor" red="0.92240319179999997" green="1" blue="0.51383647509999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="VaN-BB-i1D"/>
+                        <constraint firstAttribute="width" constant="200" id="WUZ-Cj-BWb"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8We-Yy-ywO" secondAttribute="trailing" constant="75" id="4a5-qX-TIV"/>
+                <constraint firstItem="IzZ-uG-gwP" firstAttribute="top" secondItem="8We-Yy-ywO" secondAttribute="bottom" constant="50" id="6gw-sp-G1X"/>
+                <constraint firstItem="WDt-vh-bCy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ATq-lj-WjE"/>
+                <constraint firstItem="8We-Yy-ywO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="75" id="HpZ-pH-k3I"/>
+                <constraint firstItem="IzZ-uG-gwP" firstAttribute="leading" secondItem="wVI-59-gdF" secondAttribute="trailing" constant="20" id="OaM-dG-dmJ"/>
+                <constraint firstItem="8We-Yy-ywO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="Uav-M8-NnQ"/>
+                <constraint firstItem="wVI-59-gdF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VqL-Qs-MAd"/>
+                <constraint firstItem="WDt-vh-bCy" firstAttribute="top" secondItem="JbP-lK-q2y" secondAttribute="bottom" constant="100" id="cZC-Rx-TTD"/>
+                <constraint firstItem="wVI-59-gdF" firstAttribute="top" secondItem="8We-Yy-ywO" secondAttribute="bottom" constant="50" id="e7n-Oj-HvO"/>
+                <constraint firstItem="JbP-lK-q2y" firstAttribute="top" secondItem="8We-Yy-ywO" secondAttribute="bottom" constant="50" id="pm5-jm-ZUd"/>
+                <constraint firstItem="wVI-59-gdF" firstAttribute="leading" secondItem="JbP-lK-q2y" secondAttribute="trailing" constant="20" id="xDm-nl-a8i"/>
+            </constraints>
+            <point key="canvasLocation" x="-77.5" y="-198.5"/>
+        </view>
+    </objects>
+</document>

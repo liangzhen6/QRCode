@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XVB-ex-y7d">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Mfa-YH-VVb">
+            <objects>
+                <navigationController id="XVB-ex-y7d" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QTG-AJ-b0R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="frN-so-joG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iiz-29-T1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1487" y="-236"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcW-E3-DrY">
+                                <rect key="frame" x="138" y="214" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.86783808409999996" green="0.45791683659999999" blue="0.17211640689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="K7J-Ji-NWF"/>
+                                    <constraint firstAttribute="height" constant="30" id="vOl-CD-ppr"/>
+                                </constraints>
+                                <state key="normal" title="二维码生成">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="QRCodeCreate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQM-yL-clA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaS-jq-pba">
+                                <rect key="frame" x="138" y="344" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.86783808409999996" green="0.45791683659999999" blue="0.17211640689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DG6-hl-HXl"/>
+                                    <constraint firstAttribute="height" constant="30" id="MoV-LF-rQD"/>
+                                </constraints>
+                                <state key="normal" title="二维码识别">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="QRCodeIdentify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Crq-Ue-FYW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CcW-E3-DrY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="Xot-ym-xzG"/>
+                            <constraint firstItem="oaS-jq-pba" firstAttribute="top" secondItem="CcW-E3-DrY" secondAttribute="bottom" constant="100" id="pI2-5y-ZKb"/>
+                            <constraint firstItem="oaS-jq-pba" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rq6-L2-ppN"/>
+                            <constraint firstItem="CcW-E3-DrY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tkc-Zn-koR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uMk-v4-Ile"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="-236.13193403298354"/>
+        </scene>
+    </scenes>
+</document>
