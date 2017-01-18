@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "QRCodeCreateVC.h"
+#import "QRCodeIdentifyVC.h"
 @interface ViewController ()
 
 @end
@@ -26,8 +27,8 @@
 
 //二维码识别
 - (IBAction)QRCodeIdentify:(id)sender {
-    
-    
+    QRCodeIdentifyVC * indnetifyVC = [[QRCodeIdentifyVC alloc] init];
+    [self.navigationController pushViewController:indnetifyVC animated:YES];
 }
 
 

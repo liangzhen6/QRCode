@@ -8,7 +8,7 @@
 
 #import "QRCodeCreateVC.h"
 #import "QRCodeTool.h"
-
+#import "AlertController.h"
 @interface QRCodeCreateVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -39,7 +39,11 @@
 
 }
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    
+    if (!error) {
+         [AlertController alertControllerWithController:self title:@"提示" message:@"保存二维码成功" cancelButtonTitle:@"确定" otherButtonTitle:nil cancelAction:nil otherAction:nil];
+    }else{
+     [AlertController alertControllerWithController:self title:@"提示" message:@"保存二维码成功失败" cancelButtonTitle:@"确定" otherButtonTitle:nil cancelAction:nil otherAction:nil];
+    }
     NSLog(@"image = %@, error = %@, contextInfo = %@", image, error, contextInfo);
 }
 - (IBAction)createQRCodeAction:(UIButton*)sender {
@@ -73,6 +77,7 @@
       self.ImageView.image = [QRCodeTool createDefaultQRCodeWithData:self.textField.text imageViewSize:self.ImageView.bounds.size];
     }else{
         NSLog(@"请填写二维码信息");
+        [AlertController alertControllerWithController:self title:@"提示" message:@"请填写二维码信息" cancelButtonTitle:@"确定" otherButtonTitle:nil cancelAction:nil otherAction:nil];
     }
     
 }
@@ -84,6 +89,7 @@
         self.ImageView.image = [QRCodeTool createLogoQRCodeWithData:self.textField.text imageViewSize:self.ImageView.bounds.size logoImage:image];
     }else{
         NSLog(@"请填写二维码信息");
+         [AlertController alertControllerWithController:self title:@"提示" message:@"请填写二维码信息" cancelButtonTitle:@"确定" otherButtonTitle:nil cancelAction:nil otherAction:nil];
     }
     
 }
@@ -96,6 +102,7 @@
         self.ImageView.image = [QRCodeTool createColorQRCodeWithData:self.textField.text imageViewSize:self.ImageView.bounds.size backgroundColor:backgroundColor mainColor:mainColor];
     }else{
         NSLog(@"请填写二维码信息");
+         [AlertController alertControllerWithController:self title:@"提示" message:@"请填写二维码信息" cancelButtonTitle:@"确定" otherButtonTitle:nil cancelAction:nil otherAction:nil];
     }
 
 

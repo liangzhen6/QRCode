@@ -35,7 +35,6 @@
     CGImageRef imageRef = [context createCGImage:transformImage fromRect:transformImage.extent];
     UIImage *qrCodeImage = [UIImage imageWithCGImage:imageRef];
 //    UIImage *qrCodeImage = [UIImage imageWithCIImage:transformImage];
-    
     return qrCodeImage;
 }
 
@@ -93,12 +92,8 @@
     CIContext *context = [CIContext contextWithOptions:nil];
     CGImageRef imageRef = [context createCGImage:colorCIImage fromRect:colorCIImage.extent];
     UIImage * colorQRCodeImage = [UIImage imageWithCGImage:imageRef];
-
-    
 //    UIImage * colorQRCodeImage = [UIImage imageWithCIImage:colorCIImage];
-    
     return colorQRCodeImage;
-
 
 }
 
