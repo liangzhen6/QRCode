@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA36C75B1E30CB54005C234F /* QRCodeSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA36C75A1E30CB54005C234F /* QRCodeSuccessVC.m */; };
 		FA43F7271E2F434300034998 /* QRCodeIdentifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA43F7251E2F434300034998 /* QRCodeIdentifyVC.m */; };
-		FA43F7281E2F434300034998 /* QRCodeIdentifyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA43F7261E2F434300034998 /* QRCodeIdentifyVC.xib */; };
 		FA43F72C1E2F63C100034998 /* AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA43F72B1E2F63C100034998 /* AlertController.m */; };
 		FAA1DE951E2DCD6A00F5EB2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA1DE941E2DCD6A00F5EB2F /* main.m */; };
 		FAA1DE981E2DCD6A00F5EB2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA1DE971E2DCD6A00F5EB2F /* AppDelegate.m */; };
@@ -41,9 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA36C7591E30CB54005C234F /* QRCodeSuccessVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeSuccessVC.h; sourceTree = "<group>"; };
+		FA36C75A1E30CB54005C234F /* QRCodeSuccessVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeSuccessVC.m; sourceTree = "<group>"; };
 		FA43F7241E2F434300034998 /* QRCodeIdentifyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeIdentifyVC.h; sourceTree = "<group>"; };
 		FA43F7251E2F434300034998 /* QRCodeIdentifyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeIdentifyVC.m; sourceTree = "<group>"; };
-		FA43F7261E2F434300034998 /* QRCodeIdentifyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeIdentifyVC.xib; sourceTree = "<group>"; };
 		FA43F72A1E2F63C100034998 /* AlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertController.h; sourceTree = "<group>"; };
 		FA43F72B1E2F63C100034998 /* AlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertController.m; sourceTree = "<group>"; };
 		FAA1DE901E2DCD6A00F5EB2F /* QRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +95,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA36C75C1E30DD10005C234F /* SuccessDteail */ = {
+			isa = PBXGroup;
+			children = (
+				FA36C7591E30CB54005C234F /* QRCodeSuccessVC.h */,
+				FA36C75A1E30CB54005C234F /* QRCodeSuccessVC.m */,
+			);
+			name = SuccessDteail;
+			sourceTree = "<group>";
+		};
+		FA36C75D1E30DD2A005C234F /* Identify&Create */ = {
+			isa = PBXGroup;
+			children = (
+				FA43F7241E2F434300034998 /* QRCodeIdentifyVC.h */,
+				FA43F7251E2F434300034998 /* QRCodeIdentifyVC.m */,
+				FAA1DEC61E2DD07300F5EB2F /* QRCodeCreateVC.h */,
+				FAA1DEC71E2DD07300F5EB2F /* QRCodeCreateVC.m */,
+				FAA1DEC81E2DD07300F5EB2F /* QRCodeCreateVC.xib */,
+			);
+			name = "Identify&Create";
+			sourceTree = "<group>";
+		};
 		FA43F7291E2F45ED00034998 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,12 +155,8 @@
 				FA43F7291E2F45ED00034998 /* Library */,
 				FAA1DE991E2DCD6A00F5EB2F /* ViewController.h */,
 				FAA1DE9A1E2DCD6A00F5EB2F /* ViewController.m */,
-				FA43F7241E2F434300034998 /* QRCodeIdentifyVC.h */,
-				FA43F7251E2F434300034998 /* QRCodeIdentifyVC.m */,
-				FA43F7261E2F434300034998 /* QRCodeIdentifyVC.xib */,
-				FAA1DEC61E2DD07300F5EB2F /* QRCodeCreateVC.h */,
-				FAA1DEC71E2DD07300F5EB2F /* QRCodeCreateVC.m */,
-				FAA1DEC81E2DD07300F5EB2F /* QRCodeCreateVC.xib */,
+				FA36C75D1E30DD2A005C234F /* Identify&Create */,
+				FA36C75C1E30DD10005C234F /* SuccessDteail */,
 				FAA1DE9C1E2DCD6A00F5EB2F /* Main.storyboard */,
 				FAA1DE9F1E2DCD6A00F5EB2F /* Assets.xcassets */,
 				FAA1DEA11E2DCD6A00F5EB2F /* LaunchScreen.storyboard */,
@@ -284,7 +302,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA1DEA31E2DCD6A00F5EB2F /* LaunchScreen.storyboard in Resources */,
-				FA43F7281E2F434300034998 /* QRCodeIdentifyVC.xib in Resources */,
 				FAA1DEA01E2DCD6A00F5EB2F /* Assets.xcassets in Resources */,
 				FAA1DECA1E2DD07300F5EB2F /* QRCodeCreateVC.xib in Resources */,
 				FAA1DE9E1E2DCD6A00F5EB2F /* Main.storyboard in Resources */,
@@ -316,6 +333,7 @@
 				FAA1DE9B1E2DCD6A00F5EB2F /* ViewController.m in Sources */,
 				FAA1DE981E2DCD6A00F5EB2F /* AppDelegate.m in Sources */,
 				FA43F7271E2F434300034998 /* QRCodeIdentifyVC.m in Sources */,
+				FA36C75B1E30CB54005C234F /* QRCodeSuccessVC.m in Sources */,
 				FAA1DECD1E2DF9B600F5EB2F /* QRCodeTool.m in Sources */,
 				FAA1DEC91E2DD07300F5EB2F /* QRCodeCreateVC.m in Sources */,
 				FAA1DE951E2DCD6A00F5EB2F /* main.m in Sources */,
