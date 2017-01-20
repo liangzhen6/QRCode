@@ -18,9 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self initLeftBarItme];
     [self openUrl];
     // Do any additional setup after loading the view.
+}
+
+- (void)initLeftBarItme {
+    UIBarButtonItem * barItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(backAction:)];
+    self.navigationItem.leftBarButtonItem = barItem;
+}
+
+- (void)backAction:(UIBarButtonItem *)item {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)openUrl{
@@ -37,8 +46,7 @@
 
 /**将数据转化为 html数据
  */
-- (NSString *)changeStrToJStringWithStr:(NSString *)string
-{
+- (NSString *)changeStrToJStringWithStr:(NSString *)string {
     
     UIColor *fontColor = [UIColor whiteColor];
     NSString * stringValue = string;
@@ -57,7 +65,7 @@
     
 }
 
-- (WKWebView *)webView{
+- (WKWebView *)webView {
     if (_webView==nil) {
         _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
         _webView.UIDelegate = self;

@@ -10,6 +10,7 @@
 		FA36C75B1E30CB54005C234F /* QRCodeSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA36C75A1E30CB54005C234F /* QRCodeSuccessVC.m */; };
 		FA43F7271E2F434300034998 /* QRCodeIdentifyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA43F7251E2F434300034998 /* QRCodeIdentifyVC.m */; };
 		FA43F72C1E2F63C100034998 /* AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA43F72B1E2F63C100034998 /* AlertController.m */; };
+		FA5EBA9F1E31BCB60096A426 /* QRCodeScnnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5EBA9E1E31BCB60096A426 /* QRCodeScnnerView.m */; };
 		FAA1DE951E2DCD6A00F5EB2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA1DE941E2DCD6A00F5EB2F /* main.m */; };
 		FAA1DE981E2DCD6A00F5EB2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA1DE971E2DCD6A00F5EB2F /* AppDelegate.m */; };
 		FAA1DE9B1E2DCD6A00F5EB2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA1DE9A1E2DCD6A00F5EB2F /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		FA43F7251E2F434300034998 /* QRCodeIdentifyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeIdentifyVC.m; sourceTree = "<group>"; };
 		FA43F72A1E2F63C100034998 /* AlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertController.h; sourceTree = "<group>"; };
 		FA43F72B1E2F63C100034998 /* AlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertController.m; sourceTree = "<group>"; };
+		FA5EBA9D1E31BCB60096A426 /* QRCodeScnnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScnnerView.h; sourceTree = "<group>"; };
+		FA5EBA9E1E31BCB60096A426 /* QRCodeScnnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScnnerView.m; sourceTree = "<group>"; };
 		FAA1DE901E2DCD6A00F5EB2F /* QRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA1DE941E2DCD6A00F5EB2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAA1DE961E2DCD6A00F5EB2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				FAA1DECC1E2DF9B600F5EB2F /* QRCodeTool.m */,
 				FA43F72A1E2F63C100034998 /* AlertController.h */,
 				FA43F72B1E2F63C100034998 /* AlertController.m */,
+				FA5EBA9D1E31BCB60096A426 /* QRCodeScnnerView.h */,
+				FA5EBA9E1E31BCB60096A426 /* QRCodeScnnerView.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA43F72C1E2F63C100034998 /* AlertController.m in Sources */,
+				FA5EBA9F1E31BCB60096A426 /* QRCodeScnnerView.m in Sources */,
 				FAA1DE9B1E2DCD6A00F5EB2F /* ViewController.m in Sources */,
 				FAA1DE981E2DCD6A00F5EB2F /* AppDelegate.m in Sources */,
 				FA43F7271E2F434300034998 /* QRCodeIdentifyVC.m in Sources */,

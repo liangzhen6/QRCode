@@ -9,11 +9,17 @@
 #import "QRCodeIdentifyVC.h"
 #import <AVFoundation/AVFoundation.h>
 #import "QRCodeSuccessVC.h"
+#import "QRCodeScnnerView.h"
+
 
 @interface QRCodeIdentifyVC ()<AVCaptureMetadataOutputObjectsDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @property(nonatomic)AVCaptureSession * captureSession;
+
 @property(nonatomic)AVCaptureVideoPreviewLayer * captureVideoPreviewLayer;
+
+@property(nonatomic)QRCodeScnnerView * scnnerView;
+
 
 @end
 
@@ -21,11 +27,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [self initRightBarButtonItem];
     [self initCaptureDevice];
+    [self.view addSubview:self.scnnerView];
+
 
     // Do any additional setup after loading the view from its nib.
+}
+
+//将要消失的时候
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    if (_scnnerView) {
+        [_scnnerView removeTimer];
+        [_scnnerView removeFromSuperview];
+        _scnnerView = nil;
+    }
 }
 
 - (void)initCaptureDevice {
@@ -159,6 +177,15 @@
 }
 
 
+
+
+- (QRCodeScnnerView *)scnnerView {
+    if (_scnnerView==nil) {
+        _scnnerView = [[QRCodeScnnerView alloc] initWithFrame:self.view.frame outsideViewLayer:self.view.layer];
+    }
+
+    return _scnnerView;
+}
 
 
 
